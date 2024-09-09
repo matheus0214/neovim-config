@@ -6,7 +6,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 mason.setup()
 mason_lsp.setup({
-  ensure_installed = {'lua_ls', 'tsserver', 'clangd'},
+  ensure_installed = {'lua_ls', 'ts_ls', 'clangd'},
   handlers = {
     function(server_name)
       require('lspconfig')[server_name].setup({})
@@ -14,7 +14,7 @@ mason_lsp.setup({
   },
 })
 
-nvim_lspconfig.tsserver.setup({
+nvim_lspconfig.ts_ls.setup({
   capabilities = capabilities,
 })
 nvim_lspconfig.clangd.setup({
