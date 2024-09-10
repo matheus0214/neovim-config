@@ -24,7 +24,7 @@ end
 
 local mappings = {
   { "<leader>e",  "<cmd>NvimTreeToggle<cr>",                     desc = "Explorer" },
-  { "F3",         "<cmd>quitall<cr>",                            desc = "Quit all" },
+  { "<F5>",         "<cmd>quitall<cr>",                            desc = "Quit all" },
   { "<space>q",   "<cmd>quit<cr>",                               desc = "Quit" },
 
   { "<space>s",   group = "Split" },
