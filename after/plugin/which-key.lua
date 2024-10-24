@@ -50,9 +50,10 @@ local mappings = {
   { "<space>gt",  "<cmd>Telescope git_stash<cr>",                desc = "Stash list" },
   { "<space>gs",  "<cmd>Telescope git_status<cr>",               desc = "Status" },
   { "<space>gc",  "<cmd>Telescope git_commits<cr>",              desc = "Commits" },
+  { "<space>b",  "<cmd>Telescope buffers<cr>",              desc = "Buffers" },
 
-  { "td",  ":tab split | lua vim.lsp.buf.definition()<CR>", desc = "Go to definition" },
-  { "tv",  ":vsplit | lua vim.lsp.buf.definition()<CR>", desc = "Go to definition" },
+  { "gd",  ":tab split | lua vim.lsp.buf.definition()<CR>", desc = "Go to definition" },
+  { "gv",  ":vsplit | lua vim.lsp.buf.definition()<CR>", desc = "Go to definition" },
   { "<S-k>", vim.lsp.buf.hover, desc = "Show hover information" },
   { "tD", vim.lsp.buf.declaration, desc = "Jumps to the declaration of the symbol" },
   { "ti", vim.lsp.buf.implementation, desc = "Lists all the implementations"},
@@ -93,6 +94,10 @@ map("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window W
 
 -- Clear search with <esc>
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and Clear hlsearch" })
+
+map('n', 'gl', '$', { noremap = true, silent = true })
+map('n', 'gh', '0', { noremap = true, silent = true })
+
 
 wk.add(mappings, {})
 wk.add({
