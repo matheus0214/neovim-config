@@ -1,7 +1,7 @@
 local config = require('lualine')
 
-config.setup({
-  options = {
-    theme = 'horizon'
-  }
-})
+-- config.setup({
+--   options = {
+--     theme = 'horizon'
+--   }
+-- })
