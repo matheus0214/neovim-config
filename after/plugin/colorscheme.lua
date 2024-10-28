@@ -1,2 +1,2 @@
 -- vim.o.background = 'light'
--- vim.cmd("colorscheme kanagawa")
+vim.cmd("colorscheme kanagawa")
