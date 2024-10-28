@@ -27,10 +27,6 @@ local mappings = {
   { "<F5>",         "<cmd>quitall<cr>",                            desc = "Quit all" },
   { "<space>q",   "<cmd>quit<cr>",                               desc = "Quit" },
 
-  { "<space>s",   group = "Split" },
-  { "<space>sh",  "<cmd>split<cr>",                              desc = "Horizontal split" },
-  { "<space>sv",  "<cmd>vsplit<cr>",                             desc = "Vertical split" },
-
   { "<space>w",   "<cmd>w!<cr>",                                 desc = "Save buffer" },
 
   { "<space>f",   group = "Telescope" },
@@ -52,8 +48,11 @@ local mappings = {
   { "<space>gc",  "<cmd>Telescope git_commits<cr>",              desc = "Commits" },
   { "<space>b",  "<cmd>Telescope buffers<cr>",              desc = "Buffers" },
 
-  { "gd",  ":tab split | lua vim.lsp.buf.definition()<CR>", desc = "Go to definition" },
-  { "gv",  ":vsplit | lua vim.lsp.buf.definition()<CR>", desc = "Go to definition" },
+  { "gd",  "<cmd> lua vim.lsp.buf.definition()<CR>", desc = "Go to definition" },
+  { "gdt",  ":tab split | lua vim.lsp.buf.definition()<CR>", desc = "Go to definition" },
+  { "gdv",  ":vsplit | lua vim.lsp.buf.definition()<CR>", desc = "Go to definition" },
+  { "<space>c", ":bd<CR>", desc = "Buffer close"},
+
   { "<S-k>", vim.lsp.buf.hover, desc = "Show hover information" },
   { "tD", vim.lsp.buf.declaration, desc = "Jumps to the declaration of the symbol" },
   { "ti", vim.lsp.buf.implementation, desc = "Lists all the implementations"},
@@ -78,7 +77,11 @@ local mappings = {
 
   { "<S-l>",      ":BufferNext<cr>",                            desc = "Next tab" },
   { "<S-h>",      ":BufferPrevious<cr>",                            desc = "Previous tab" },
-  { "<leader>c",      ":BufferClose<cr>",                            desc = "Close tab" },
+
+  {'tn', ':tabnext<CR>', desc = "Next tab"},
+  {'tp', ':tabprev<CR>', desc = "Previous tab"},
+  {'to', ':tabnew<CR>', desc = "New tab"},
+  {'tc', ':tabclose<CR>', desc = "Close tab"}
 }
 
 map("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
