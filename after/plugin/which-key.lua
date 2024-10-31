@@ -23,7 +23,10 @@ function _lazygit_toggle()
 end
 
 local mappings = {
-  { "<leader>e",  "<cmd>NvimTreeToggle<cr>",                     desc = "Explorer" },
+  -- { "<leader>e",  "<cmd>NvimTreeToggle<cr>",                     desc = "Explorer" },
+  { "<space>ee", "<cmd>:Lexplore<CR>", desc = "File explorer" },
+  { "<space>ed", "<cmd>:Lexplore %:p:h<CR>", desc = "File explorer file" },
+
   { "<F5>",         "<cmd>quitall<cr>",                            desc = "Quit all" },
   { "<space>q",   "<cmd>quit<cr>",                               desc = "Quit" },
 
@@ -92,8 +95,8 @@ map("n", "<C-l>", "<C-w>l", { desc = "Go to Right Window", remap = true })
 -- Resize window
 map("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
 map("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
-map("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
-map("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
+map("n", "<C-Left>", "<cmd>vertical resize +2<cr>", { desc = "Decrease Window Width" })
+map("n", "<C-Right>", "<cmd>vertical resize -2<cr>", { desc = "Increase Window Width" })
 
 -- Clear search with <esc>
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and Clear hlsearch" })

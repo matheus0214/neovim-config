@@ -47,3 +47,9 @@ vim.o.foldcolumn = '1' -- '0' is not bad
 vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
+
+
+vim.g.netrw_winsize = 30
+-- vim.g.netrw_keepdir = 0
+vim.g.netrw_banner = 0
+vim.g.netrw_liststyle = 3

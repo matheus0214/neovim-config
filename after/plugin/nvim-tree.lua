@@ -1,4 +1,5 @@
 local nvim_tree = require('nvim-tree')
+
 local api = require('nvim-tree.api')
 
 local function on_attach(bufnr)
