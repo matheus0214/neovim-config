@@ -39,6 +39,7 @@ local mappings = {
   { "<space>fk",  "<cmd>Telescope keymaps<cr>",                  desc = "Keymaps" },
   { "<space>fh",  "<cmd>Telescope help_tags<cr>",                desc = "Help tags" },
   { "<space>fc",  "<cmd>Telescope commands<cr>",                 desc = "Commands" },
+  { "<space>fb",  "<cmd>Telescope buffers<cr>",              desc = "Buffers" },
   { "<space>fs",  "<cmd>Telescope lsp_document_symbols<cr>",     desc = "Symbols" },
 
   { "<space>g",   group = "Git" },
@@ -49,7 +50,6 @@ local mappings = {
   { "<space>gt",  "<cmd>Telescope git_stash<cr>",                desc = "Stash list" },
   { "<space>gs",  "<cmd>Telescope git_status<cr>",               desc = "Status" },
   { "<space>gc",  "<cmd>Telescope git_commits<cr>",              desc = "Commits" },
-  { "<space>b",  "<cmd>Telescope buffers<cr>",              desc = "Buffers" },
 
   { "gd",  "<cmd> lua vim.lsp.buf.definition()<CR>", desc = "Go to definition" },
   { "gdt",  ":tab split | lua vim.lsp.buf.definition()<CR>", desc = "Go to definition" },

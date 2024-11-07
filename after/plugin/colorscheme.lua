@@ -1,3 +1,3 @@
 -- vim.o.background = 'light'
-vim.cmd("colorscheme monokai-pro")
--- vim.cmd("colorscheme kanagawa")
+vim.cmd("colorscheme monokai-pro-ristretto")
+-- vim.cmd("colorscheme zaibatsu")
