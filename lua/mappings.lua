@@ -57,9 +57,9 @@ map("n", "<space>fb",  "<cmd>Telescope buffers<cr>", { noremap = true, silent = 
 map("n", "<space>fs",  "<cmd>Telescope lsp_document<cr>", { noremap = true, silent = true })
 
 -- Git
-map("n", "<space>gbb", "<cmd>Gitsigns blame<cr>", { noremap = true, silent = true })
-map("n", "<space>gba", "<cmd>Gitsigns toggle_current_line_blame<cr>", { noremap = true, silent = true })
-map("n", "<space>gbl", "<cmd>Gitsigns blame_line<cr>", { noremap = true, silent = true })
+map("n", "<space>gb", "<cmd>Gitsigns blame<cr>", { noremap = true, silent = true })
+map("n", "<space>ga", "<cmd>Gitsigns toggle_current_line_blame<cr>", { noremap = true, silent = true })
+map("n", "<space>gl", "<cmd>Gitsigns blame_line<cr>", { noremap = true, silent = true })
 map("n", "<space>gr",  "<cmd>Telescope git_branches<cr>", { noremap = true, silent = true })
 map("n", "<space>gt",  "<cmd>Telescope git_stash<cr>", { noremap = true, silent = true })
 map("n", "<space>gs",  "<cmd>Telescope git_status<cr>", { noremap = true, silent = true })
