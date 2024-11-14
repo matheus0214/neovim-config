@@ -92,3 +92,6 @@ map("n", "<C-Right>", "<cmd>vertical resize -2<cr>", { desc = "Increase Window W
 -- Clear search with <esc>
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and Clear hlsearch" })
 
+
+map("x", "J", ":move '>+1<CR>gv=gv", { noremap = true, silent = true })
+map("x", "K", ":move '<-2<CR>gv=gv", { noremap = true, silent = true })
