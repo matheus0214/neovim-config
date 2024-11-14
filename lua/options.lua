@@ -54,5 +54,5 @@ vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3
 
 -- vim.o.background = 'light'
--- vim.opt.timeoutlen = 400 -- time to wait for a mapped sequence to complete (in milliseconds)
+vim.opt.timeoutlen = 600 -- time to wait for a mapped sequence to complete (in milliseconds)
 vim.opt.guicursor = "n-v-i-c:block"
