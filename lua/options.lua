@@ -36,7 +36,7 @@ vim.opt.number = true -- set numbered lines
 vim.opt.relativenumber = true-- set relative numbered lines
 vim.opt.numberwidth = 4 -- set number column width to 2 {default 4}
 vim.opt.signcolumn = "yes" -- always show the sign column otherwise it would shift the text each time
-vim.opt.wrap = false -- display lines as one long line
+vim.opt.wrap = true -- display lines as one long line
 vim.opt.spell = false
 vim.opt.spelllang = "en"
 vim.opt.scrolloff = 8 -- is one of my fav
@@ -53,3 +53,6 @@ vim.g.netrw_winsize = 30
 -- vim.g.netrw_keepdir = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3
+
+-- vim.o.background = 'light'
+vim.opt.guicursor = "n-v-i-c:block"
