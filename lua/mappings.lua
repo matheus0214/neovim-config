@@ -29,14 +29,14 @@ map("n", "<space>q", "<cmd>quit<cr>", { noremap = true, silent = true })
 
 -- Diagnostic
 map("n", "<space>df",  vim.diagnostic.open_float, { noremap = true, silent = true })
-map("n", "<space>d[",  vim.diagnostic.goto_prev, { noremap = true, silent = true })
-map("n", "<space>d]",  vim.diagnostic.goto_next, { noremap = true, silent = true })
+map("n", "<space>dp",  vim.diagnostic.goto_prev, { noremap = true, silent = true })
+map("n", "<space>dn",  vim.diagnostic.goto_next, { noremap = true, silent = true })
 
 -- Buffer
 map("n", "<space>c", ":bd<CR>", { noremap = true, silent = true })
 map("n", "<space>w", "<cmd>w!<cr>", { noremap = true, silent = true })
 map("n", "<S-k>", vim.lsp.buf.hover, { noremap = true, silent = true })
-map("n", "rn", vim.lsp.buf.rename, { noremap = true, silent = true })
+map("n", "<space>rn", vim.lsp.buf.rename, { noremap = true, silent = true })
 map("n", "ti", vim.lsp.buf.implementation, { noremap = true, silent = true })
 map("n", "td", vim.lsp.buf.type_definition, { noremap = true, silent = true })
 map("n", "tr", vim.lsp.buf.references, { noremap = true, silent = true })
