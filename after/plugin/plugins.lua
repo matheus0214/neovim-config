@@ -9,7 +9,9 @@ local telescope = require("telescope")
 
 telescope.load_extension("ui-select")
 
-gitsigns.setup({})
+gitsigns.setup({
+  current_line_blame = false
+})
 
 telescope.setup ({
   extensions = {
