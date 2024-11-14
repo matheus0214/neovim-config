@@ -1,5 +1,4 @@
 local map = vim.keymap.set
-local wk = require("which-key")
 
 function _G.set_terminal_keymaps()
   local opts = {buffer = 0}
@@ -22,70 +21,63 @@ function _lazygit_toggle()
   lazygit:toggle()
 end
 
-local mappings = {
-  -- { "<leader>e",  "<cmd>NvimTreeToggle<cr>",                     desc = "Explorer" },
-  { "<space>ee", "<cmd>:Lexplore<CR>", desc = "File explorer" },
-  { "<space>ed", "<cmd>:Lexplore %:p:h<CR>", desc = "File explorer file" },
+-- Quit commands
+map("n", "<F5>", "<cmd>quitall<cr>")
+map("n", "<space>q", "<cmd>quit<cr>")
 
-  { "<F5>",         "<cmd>quitall<cr>",                            desc = "Quit all" },
-  { "<space>q",   "<cmd>quit<cr>",                               desc = "Quit" },
+-- Diagnostic
+map("n", "<space>df",  vim.diagnostic.open_float)
+map("n", "<space>d[",  vim.diagnostic.goto_prev)
+map("n", "<space>d]",  vim.diagnostic.goto_next)
+map("n", "<space>dr",  vim.lsp.buf.references)
+map("n", "<space>dd",  vim.lsp.buf.definition)
 
-  { "<space>w",   "<cmd>w!<cr>",                                 desc = "Save buffer" },
+-- Buffer
+map("n", "<space>c", ":bd<CR>")
+map("n", "<space>w", "<cmd>w!<cr>")
+map("n", "<S-k>", vim.lsp.buf.hover)
+map("n", "rn", vim.lsp.buf.rename)
+map("n", "ti", vim.lsp.buf.implementation)
+map("n", "td", vim.lsp.buf.type_definition)
+map("n", "tr", vim.lsp.buf.references)
+map("n", "ts", vim.lsp.buf.signature_help)
+map("n", "gf", "<cmd>lua vim.lsp.buf.format({async=true})<cr>")
+map("n", "<space>ca", vim.lsp.buf.code_action)
+map("n", "gd", vim.lsp.buf.definition)
+map("n", "gdt", ":tab split | lua vim.lsp.buf.definition()<CR>")
+map("n", "gdv", ":vsplit | lua vim.lsp.buf.definition()<CR>")
 
-  { "<space>f",   group = "Telescope" },
-  { "<space>ff",  "<cmd>Telescope find_files<cr>",               desc = "Find files" },
-  { "<space>fg",  "<cmd>Telescope live_grep<cr>",                desc = "Live grep" },
-  { "<space>fb",  "<cmd>Telescope buffers<cr>",                  desc = "Buffers" },
-  { "<space>fk",  "<cmd>Telescope keymaps<cr>",                  desc = "Keymaps" },
-  { "<space>fh",  "<cmd>Telescope help_tags<cr>",                desc = "Help tags" },
-  { "<space>fc",  "<cmd>Telescope commands<cr>",                 desc = "Commands" },
-  { "<space>fb",  "<cmd>Telescope buffers<cr>",              desc = "Buffers" },
-  { "<space>fs",  "<cmd>Telescope lsp_document_symbols<cr>",     desc = "Symbols" },
+-- Telescope
+map("n", "<space>ff",  "<cmd>Telescope find_files<cr>")
+map("n", "<space>fg",  "<cmd>Telescope live_grep<cr>")
+map("n", "<space>fb",  "<cmd>Telescope buffers<cr>")
+map("n", "<space>fk",  "<cmd>Telescope keymaps<cr>")
+map("n", "<space>fh",  "<cmd>Telescope help_tags<cr>")
+map("n", "<space>fc",  "<cmd>Telescope commands<cr>")
+map("n", "<space>fb",  "<cmd>Telescope buffers<cr>")
+map("n", "<space>fs",  "<cmd>Telescope lsp_document<cr>")
 
-  { "<space>g",   group = "Git" },
-  { "<space>gbb", "<cmd>Gitsigns blame<cr>",                     desc = "Blame" },
-  { "<space>gba", "<cmd>Gitsigns toggle_current_line_blame<cr>", desc = "Blame line toogle" },
-  { "<space>gbl", "<cmd>Gitsigns blame_line<cr>",                desc = "Blame line" },
-  { "<space>gr",  "<cmd>Telescope git_branches<cr>",             desc = "Branches" },
-  { "<space>gt",  "<cmd>Telescope git_stash<cr>",                desc = "Stash list" },
-  { "<space>gs",  "<cmd>Telescope git_status<cr>",               desc = "Status" },
-  { "<space>gc",  "<cmd>Telescope git_commits<cr>",              desc = "Commits" },
+-- Git
+map("n", "<space>gbb", "<cmd>Gitsigns blame<cr>")
+map("n", "<space>gba", "<cmd>Gitsigns toggle_current_line_blame<cr>")
+map("n", "<space>gbl", "<cmd>Gitsigns blame_line<cr>")
+map("n", "<space>gr",  "<cmd>Telescope git_branches<cr>")
+map("n", "<space>gt",  "<cmd>Telescope git_stash<cr>")
+map("n", "<space>gs",  "<cmd>Telescope git_status<cr>")
+map("n", "<space>gc",  "<cmd>Telescope git_commits<cr>")
 
-  { "gd",  "<cmd> lua vim.lsp.buf.definition()<CR>", desc = "Go to definition" },
-  { "gdt",  ":tab split | lua vim.lsp.buf.definition()<CR>", desc = "Go to definition" },
-  { "gdv",  ":vsplit | lua vim.lsp.buf.definition()<CR>", desc = "Go to definition" },
-  { "<space>c", ":bd<CR>", desc = "Buffer close"},
+-- Explore files tree
+map("n", "<space>ee", "<cmd>:Lexplore<CR>")
+map("n", "<space>ed", "<cmd>:Lexplore %:p:h<CR>")
 
-  { "<S-k>", vim.lsp.buf.hover, desc = "Show hover information" },
-  { "tD", vim.lsp.buf.declaration, desc = "Jumps to the declaration of the symbol" },
-  { "ti", vim.lsp.buf.implementation, desc = "Lists all the implementations"},
-  { "to", vim.lsp.buf.type_definition, desc = "Jumps to the definition"},
-  { "tr", vim.lsp.buf.references, desc = "Lists all the references"},
-  { "ts", vim.lsp.buf.signature_help, desc = "Displays signature information"},
-  { "<F2>", vim.lsp.buf.rename, desc = "Rename"},
-  { "<F4>", vim.lsp.buf.code_action, desc = "Code actions"},
-  { "<leader>gf", "<cmd>lua vim.lsp.buf.format({async=true})<cr>", desc = "Format"},
+-- Terminal
+map("n", "<space>tf", "<cmd>ToggleTerm<cr>")
+map("n", "<space>tv", "<cmd>ToggleTerm direction=horizontal<cr>")
+map("n", "<space>gg", "<cmd>lua _lazygit_toggle()<cr>")
 
-  { "<space>d",   group = "Diagnostic" },
-  { "<space>df",  vim.diagnostic.open_float,                     desc = "Diagnostic float" },
-  { "<space>d[",  vim.diagnostic.goto_prev,                      desc = "Diagnostic previous" },
-  { "<space>d]",  vim.diagnostic.goto_next,                      desc = "Diagnostic next" },
-  { "<space>dr",  vim.lsp.buf.references,                        desc = "References" },
-  { "<space>dd",  vim.lsp.buf.definition,                        desc = "Definition" },
-  { "<space>dh",  vim.lsp.buf.hover,                             desc = "Definition hover" },
-
-  { "<space>t",   group = "Terminal" },
-  { "<space>tf",  "<cmd>ToggleTerm<cr>",                         desc = "Open terminal float" },
-  { "<space>tv",  "<cmd>ToggleTerm direction=horizontal<cr>",    desc = "Open terminal bottom" },
-
-  { "<S-l>",      ":BufferNext<cr>",                            desc = "Next tab" },
-  { "<S-h>",      ":BufferPrevious<cr>",                            desc = "Previous tab" },
-
-  {'tn', ':tabnext<CR>', desc = "Next tab"},
-  {'tp', ':tabprev<CR>', desc = "Previous tab"},
-  {'to', ':tabnew<CR>', desc = "New tab"},
-  {'tc', ':tabclose<CR>', desc = "Close tab"}
-}
+-- Tabs
+map("n", "tn", ":tabnext<CR>")
+map("n", "tp", ":tabprev<CR>")
 
 map("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
 map("n", "<C-j>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
@@ -101,12 +93,3 @@ map("n", "<C-Right>", "<cmd>vertical resize -2<cr>", { desc = "Increase Window W
 -- Clear search with <esc>
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and Clear hlsearch" })
 
-map('n', 'gl', '$', { noremap = true, silent = true })
-map('n', 'gh', '0', { noremap = true, silent = true })
-
-
-wk.add(mappings, {})
-wk.add({
-  { "<space>gg", "<cmd>lua _lazygit_toggle()<cr>",           desc = "Lazygit" },
-  { "<space>rn", "<cmd>lua require('renamer').rename()<cr>", desc = "Rename" }
-})
