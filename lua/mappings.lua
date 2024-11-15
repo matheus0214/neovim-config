@@ -95,3 +95,7 @@ map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and Clear hlsea
 
 map("x", "J", ":move '>+1<CR>gv=gv", { noremap = true, silent = true })
 map("x", "K", ":move '<-2<CR>gv=gv", { noremap = true, silent = true })
+
+vim.keymap.set("n", "<leader><leader>", function()
+    vim.cmd("so")  -- Reload the configuration
+end)
