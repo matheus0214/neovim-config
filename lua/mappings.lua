@@ -54,7 +54,7 @@ map("n", "<space>fk",  "<cmd>Telescope keymaps<cr>", { noremap = true, silent = 
 map("n", "<space>fh",  "<cmd>Telescope help_tags<cr>", { noremap = true, silent = true })
 map("n", "<space>fc",  "<cmd>Telescope commands<cr>", { noremap = true, silent = true })
 map("n", "<space>fb",  "<cmd>Telescope buffers<cr>", { noremap = true, silent = true })
-map("n", "<space>fs",  "<cmd>Telescope lsp_document<cr>", { noremap = true, silent = true })
+map("n", "<space>fs",  "<cmd>Telescope lsp_document_symbols<cr>", { noremap = true, silent = true })
 
 -- Git
 map("n", "<space>gb", "<cmd>Gitsigns blame<cr>", { noremap = true, silent = true })
