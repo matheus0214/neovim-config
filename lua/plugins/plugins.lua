@@ -46,5 +46,6 @@ return {
   { 'williamboman/mason.nvim' },
   { 'williamboman/mason-lspconfig.nvim' },
   { 'neovim/nvim-lspconfig' },
-  { "rose-pine/neovim",                 name = "rose-pine" }
+  { "rose-pine/neovim",                 name = "rose-pine" },
+  { "folke/zen-mode.nvim" }
 }
