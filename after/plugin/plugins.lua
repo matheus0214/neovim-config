@@ -24,6 +24,14 @@ mason_ensure_installed.setup({
 	},
 })
 
+conform.setup({
+	formatters_by_ft = {
+		lua = { "stylua" },
+		python = { "black" },
+		javascript = { "biome", "prettierd", "prettier", stop_after_first = true },
+	},
+})
+
 telescope.load_extension("ui-select")
 
 gitsigns.setup({
@@ -35,14 +43,6 @@ telescope.setup({
 		["ui-select"] = {
 			require("telescope.themes").get_dropdown({}),
 		},
-	},
-})
-
-conform.setup({
-	formatters_by_ft = {
-		lua = { "stylua" },
-		python = { "black" },
-		javascript = { "biome", "prettierd", "prettier", stop_after_first = true },
 	},
 })
 
