@@ -4,7 +4,6 @@ local terminal = require('toggleterm')
 local fold = require('ufo')
 local treesitter = require('nvim-treesitter.configs')
 local gitsigns = require('gitsigns')
-local null_ls = require("null-ls")
 local telescope = require("telescope")
 
 telescope.load_extension("ui-select")
@@ -21,19 +20,18 @@ telescope.setup ({
     }
   }
 })
+local conform = require("conform")
 
-
-null_ls.setup({
-  sourcers = {
-    null_ls.builtins.formatting.prettier,
-    null_ls.builtins.formatting.biome,
-    null_ls.builtins.formatting.clang_format,
-    require("none-ls.diagnostics.eslint_d"),
-    null_ls.builtins.diagnostics.cppcheck
-  }
+conform.setup({
+  formatters_by_ft = {
+    lua = { "stylua" },
+    python = { "black" },
+    javascript = { "biome", "prettierd", "prettier", stop_after_first = true },  },
 })
+
+
 require('rose-pine').setup({
-    disable_background = true
+    disable_background = false
 })
 
 vim.cmd("colorscheme rose-pine")

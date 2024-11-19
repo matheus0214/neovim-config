@@ -29,12 +29,6 @@ return {
     version = "*",
   },
   {
-    'nvimtools/none-ls.nvim',
-    dependencies = {
-      "nvimtools/none-ls-extras.nvim",
-    }
-  },
-  {
     'nvim-telescope/telescope.nvim',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
@@ -47,5 +41,6 @@ return {
   { 'williamboman/mason-lspconfig.nvim' },
   { 'neovim/nvim-lspconfig' },
   { "rose-pine/neovim",                 name = "rose-pine" },
-  { "folke/zen-mode.nvim" }
+  { "folke/zen-mode.nvim" },
+  { "stevearc/conform.nvim"}
 }

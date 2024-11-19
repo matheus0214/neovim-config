@@ -41,7 +41,7 @@ map("n", "ti", vim.lsp.buf.implementation, { noremap = true, silent = true })
 map("n", "td", vim.lsp.buf.type_definition, { noremap = true, silent = true })
 map("n", "tr", vim.lsp.buf.references, { noremap = true, silent = true })
 map("n", "ts", vim.lsp.buf.signature_help, { noremap = true, silent = true })
-map("n", "gf", "<cmd>lua vim.lsp.buf.format({async=true})<cr>", { noremap = true, silent = true })
+map({"n", "v"}, "<space>fm", "<cmd>lua require('conform').format()<cr>")
 map("n", "<space>ca", vim.lsp.buf.code_action, { noremap = true, silent = true })
 map("n", "gd", vim.lsp.buf.definition, { noremap = true, silent = true })
 map("n", "gdt", ":tab split | lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
@@ -96,6 +96,14 @@ map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and Clear hlsea
 map("x", "J", ":move '>+1<CR>gv=gv", { noremap = true, silent = true })
 map("x", "K", ":move '<-2<CR>gv=gv", { noremap = true, silent = true })
 
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")  -- Reload the configuration
-end)
+function ReloadConfig()
+  for name,_ in pairs(package.loaded) do
+    if name:match("^user_config") or name:match("^plugins") then
+      package.loaded[name] = nil
+    end
+  end
+  dofile(vim.env.MYVIMRC)
+  print("Configuration reloaded!")
+end
+
+map("n", "<leader>rr", ReloadConfig, { noremap = true, silent = true })
