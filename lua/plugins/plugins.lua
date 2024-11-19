@@ -42,5 +42,7 @@ return {
   { 'neovim/nvim-lspconfig' },
   { "rose-pine/neovim",                 name = "rose-pine" },
   { "folke/zen-mode.nvim" },
-  { "stevearc/conform.nvim"}
+  { "stevearc/conform.nvim"},
+  { "WhoIsSethDaniel/mason-tool-installer.nvim"},
+  { "mfussenegger/nvim-lint"}
 }
