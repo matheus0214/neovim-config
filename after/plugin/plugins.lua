@@ -14,6 +14,16 @@ lint.linters_by_ft = {
 	javascript = { "biomejs" },
 	typescript = { "biomejs" },
 }
+local function get_pylint_path()
+    local venv = os.getenv("VIRTUAL_ENV")
+    if venv then
+        return venv .. '/bin/pylint' -- Adjust for Windows: venv .. '\\Scripts\\pylint'
+    else
+        return 'pylint' -- Fallback to system pylint
+    end
+end
+
+lint.linters.pylint.cmd = get_pylint_path()
 
 mason_ensure_installed.setup({
 	ensure_installed = {
