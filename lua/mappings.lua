@@ -103,6 +103,11 @@ function ReloadConfig()
     end
   end
   dofile(vim.env.MYVIMRC)
+
+  local config_path = vim.fn.stdpath('config') .. '/after/plugin'
+    for _, file in ipairs(vim.fn.glob(config_path .. '/*.lua', true, true)) do
+        dofile(file)
+    end
   print("Configuration reloaded!")
 end
 
