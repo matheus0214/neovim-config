@@ -10,7 +10,7 @@ local mason_ensure_installed = require("mason-tool-installer")
 local lint = require("lint")
 
 lint.linters_by_ft = {
-	python = { "pylint" },
+	python = {"pylint", "ruff" },
 	javascript = { "biomejs" },
 	typescript = { "biomejs" },
 }
@@ -31,6 +31,7 @@ mason_ensure_installed.setup({
 		"biome",
 		"stylua",
 		"pylint",
+		"ruff",
 	},
 })
 
@@ -60,7 +61,7 @@ require("rose-pine").setup({
 	disable_background = false,
 })
 
-vim.cmd("colorscheme habamax")
+vim.cmd("colorscheme retrobox")
 
 autopairs.setup({})
 autotag.setup({})
