@@ -10,7 +10,7 @@ local mason_ensure_installed = require("mason-tool-installer")
 local lint = require("lint")
 
 lint.linters_by_ft = {
-	python = {"pylint", "ruff" },
+	python = {"ruff" },
 	javascript = { "biomejs" },
 	typescript = { "biomejs" },
 }
@@ -23,7 +23,7 @@ local function get_pylint_path()
     end
 end
 
-lint.linters.pylint.cmd = get_pylint_path()
+-- lint.linters.pylint.cmd = get_pylint_path()
 
 mason_ensure_installed.setup({
 	ensure_installed = {
