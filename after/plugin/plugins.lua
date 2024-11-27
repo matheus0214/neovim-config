@@ -40,6 +40,7 @@ conform.setup({
 		lua = { "stylua" },
 		python = { "black" },
 		javascript = { "biome", "prettierd", "prettier", stop_after_first = true },
+		typescript = { "biome", "prettierd", "prettier", stop_after_first = true },
 	},
 })
 
@@ -61,7 +62,7 @@ require("rose-pine").setup({
 	disable_background = false,
 })
 
-vim.cmd("colorscheme retrobox")
+vim.cmd("colorscheme lunaperche")
 
 autopairs.setup({})
 autotag.setup({})
