@@ -40,9 +40,10 @@ return {
 	{ "williamboman/mason.nvim" },
 	{ "williamboman/mason-lspconfig.nvim" },
 	{ "neovim/nvim-lspconfig" },
-	{ "rose-pine/neovim", name = "rose-pine" },
+	{ "EdenEast/nightfox.nvim", name = "nightfox" },
 	{ "folke/zen-mode.nvim" },
 	{ "stevearc/conform.nvim" },
 	{ "WhoIsSethDaniel/mason-tool-installer.nvim" },
 	{ "mfussenegger/nvim-lint" },
+  {"nvim-lualine/lualine.nvim"}
 }

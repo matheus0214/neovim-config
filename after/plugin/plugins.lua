@@ -8,6 +8,7 @@ local telescope = require("telescope")
 local conform = require("conform")
 local mason_ensure_installed = require("mason-tool-installer")
 local lint = require("lint")
+local lualine = require("lualine")
 
 lint.linters_by_ft = {
 	python = {"ruff" },
@@ -24,6 +25,8 @@ local function get_pylint_path()
 end
 
 -- lint.linters.pylint.cmd = get_pylint_path()
+
+lualine.setup({})
 
 mason_ensure_installed.setup({
 	ensure_installed = {
@@ -58,11 +61,7 @@ telescope.setup({
 	},
 })
 
-require("rose-pine").setup({
-	disable_background = false,
-})
-
-vim.cmd("colorscheme lunaperche")
+vim.cmd("colorscheme duskfox")
 
 autopairs.setup({})
 autotag.setup({})
