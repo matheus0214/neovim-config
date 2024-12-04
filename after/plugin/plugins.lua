@@ -11,21 +11,20 @@ local lint = require("lint")
 local lualine = require("lualine")
 
 lint.linters_by_ft = {
-	python = {"ruff" },
+	python = { "ruff" },
 	javascript = { "biomejs" },
 	typescript = { "biomejs" },
 }
 local function get_pylint_path()
-    local venv = os.getenv("VIRTUAL_ENV")
-    if venv then
-        return venv .. '/bin/pylint' -- Adjust for Windows: venv .. '\\Scripts\\pylint'
-    else
-        return 'pylint' -- Fallback to system pylint
-    end
+	local venv = os.getenv("VIRTUAL_ENV")
+	if venv then
+		return venv .. "/bin/pylint" -- Adjust for Windows: venv .. '\\Scripts\\pylint'
+	else
+		return "pylint" -- Fallback to system pylint
+	end
 end
 
 -- lint.linters.pylint.cmd = get_pylint_path()
-
 lualine.setup({})
 
 mason_ensure_installed.setup({
@@ -54,14 +53,37 @@ gitsigns.setup({
 })
 
 telescope.setup({
-	extensions = {
-		["ui-select"] = {
-			require("telescope.themes").get_dropdown({}),
+	defaults = {
+		layout_strategy = "horizontal",
+		layout_config = {
+			prompt_position = "top",
+			width = 0.9,
+			height = 0.8,
+			preview_cutoff = 120,
+		},
+		sorting_strategy = "ascending",
+		winblend = 10,
+	},
+	pickers = {
+		buffers = {
+			previewer = false,
+			theme = "dropdown",
+			mappings = {
+				n = {
+					["<C-e>"] = "delete_buffer",
+					["l"] = "select_default",
+				},
+			},
+			initial_mode = "normal",
+		},
+
+		symbols = {
+			theme = "dropdown",
 		},
 	},
 })
 
-vim.cmd("colorscheme duskfox")
+vim.cmd("colorscheme catppuccin")
 
 autopairs.setup({})
 autotag.setup({})

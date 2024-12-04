@@ -63,9 +63,9 @@ map("n", "<space>ga", "<cmd>Gitsigns toggle_current_line_blame<cr>", { noremap =
 map("n", "<space>gl", "<cmd>Gitsigns blame_line<cr>", { noremap = true, silent = true })
 map("n", "<space>gr",  "<cmd>Telescope git_branches<cr>", { noremap = true, silent = true })
 map("n", "<space>gt",  "<cmd>Telescope git_stash<cr>", { noremap = true, silent = true })
--- map("n", "<space>gs",  "<cmd>Telescope git_status<cr>", { noremap = true, silent = true })
+map("n", "<space>gs",  "<cmd>Telescope git_status<cr>", { noremap = true, silent = true })
 map("n", "<space>gc",  "<cmd>Telescope git_commits<cr>", { noremap = true, silent = true })
-map("n", "<space>gs",  "<cmd>:Neotree float git_status<cr>", { noremap = true, silent = true })
+-- map("n", "<space>gs",  "<cmd>:Neotree float git_status<cr>", { noremap = true, silent = true })
 
 -- Explore files tree
 map("n", "<space>ee", "<cmd>:Neotree float<CR>", { noremap = true, silent = true })

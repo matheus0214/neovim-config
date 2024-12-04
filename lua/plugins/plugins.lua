@@ -55,4 +55,5 @@ return {
 			"MunifTanjim/nui.nvim",
 		},
 	},
+  {"catppuccin/nvim"},
 }
