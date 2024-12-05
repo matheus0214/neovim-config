@@ -25,7 +25,7 @@ local function get_pylint_path()
 end
 
 -- lint.linters.pylint.cmd = get_pylint_path()
-lualine.setup({})
+-- lualine.setup({})
 
 mason_ensure_installed.setup({
 	ensure_installed = {
@@ -63,6 +63,7 @@ telescope.setup({
 		},
 		sorting_strategy = "ascending",
 		winblend = 10,
+		initial_mode = "normal",
 	},
 	pickers = {
 		buffers = {
@@ -76,7 +77,6 @@ telescope.setup({
 			},
 			initial_mode = "normal",
 		},
-
 		symbols = {
 			theme = "dropdown",
 		},
