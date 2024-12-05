@@ -8,7 +8,7 @@ local telescope = require("telescope")
 local conform = require("conform")
 local mason_ensure_installed = require("mason-tool-installer")
 local lint = require("lint")
-local lualine = require("lualine")
+local telescope_actions = require("telescope.actions")
 
 lint.linters_by_ft = {
 	python = { "ruff" },
@@ -54,6 +54,12 @@ gitsigns.setup({
 
 telescope.setup({
 	defaults = {
+		mappings = {
+			n = {
+				["s"] = telescope_actions.select_vertical,
+				["t"] = telescope_actions.select_tab,
+			},
+		},
 		layout_strategy = "horizontal",
 		layout_config = {
 			prompt_position = "top",
@@ -66,6 +72,22 @@ telescope.setup({
 		initial_mode = "normal",
 	},
 	pickers = {
+		diagnostics = {
+			reviewer = true, -- Show diagnostic message in the preview
+			-- wrap_results = true,
+			-- line_width = "full",
+			-- show_line = false,
+			fname_width = 0,
+			layout_config = {
+				width = 0.8,
+				preview_width = 0.6,
+			},
+			layout_strategy = "vertical",
+			sorting_strategy = "ascending",
+			results_title = false,
+			preview_title = false,
+			prompt_title = false,
+		},
 		buffers = {
 			previewer = false,
 			theme = "dropdown",
