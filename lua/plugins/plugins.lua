@@ -25,10 +25,6 @@ return {
 	},
 	{ "tpope/vim-commentary" },
 	{
-		"akinsho/toggleterm.nvim",
-		version = "*",
-	},
-	{
 		"nvim-telescope/telescope.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
@@ -56,5 +52,6 @@ return {
 		},
 	},
 	{ "catppuccin/nvim" },
-  {"onsails/lspkind.nvim"}
+	{ "onsails/lspkind.nvim" },
+	{ "cpwrs/americano.nvim" },
 }

@@ -1,6 +1,5 @@
 local autopairs = require("nvim-autopairs")
 local autotag = require("nvim-ts-autotag")
-local terminal = require("toggleterm")
 local fold = require("ufo")
 local treesitter = require("nvim-treesitter.configs")
 local gitsigns = require("gitsigns")
@@ -110,20 +109,6 @@ vim.cmd("colorscheme catppuccin-macchiato")
 
 autopairs.setup({})
 autotag.setup({})
-
-terminal.setup({
-	size = 10,
-	open_mapping = [[<C-\>]],
-	shading_factor = 2,
-	direction = "float",
-	float_opts = {
-		border = "curved",
-		highlights = {
-			border = "Normal",
-			background = "Normal",
-		},
-	},
-})
 
 fold.setup({
 	provider_selector = function(bufnr, filetype, buftype)
