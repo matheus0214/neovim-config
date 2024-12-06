@@ -2,7 +2,6 @@ local autopairs = require("nvim-autopairs")
 local autotag = require("nvim-ts-autotag")
 local fold = require("ufo")
 local treesitter = require("nvim-treesitter.configs")
-local gitsigns = require("gitsigns")
 local telescope = require("telescope")
 local conform = require("conform")
 local mason_ensure_installed = require("mason-tool-installer")
@@ -47,10 +46,6 @@ conform.setup({
 
 telescope.load_extension("ui-select")
 
-gitsigns.setup({
-	current_line_blame = false,
-})
-
 telescope.setup({
 	defaults = {
 		mappings = {
@@ -67,7 +62,6 @@ telescope.setup({
 			preview_cutoff = 120,
 		},
 		sorting_strategy = "ascending",
-		winblend = 10,
 		initial_mode = "normal",
 	},
 	pickers = {

@@ -5,7 +5,6 @@ return {
 			"kevinhwang91/promise-async",
 		},
 	},
-	{ "lewis6991/gitsigns.nvim" },
 	{ "gelguy/wilder.nvim" },
 	{ "windwp/nvim-ts-autotag" },
 	{

@@ -1,58 +1,44 @@
 local map = vim.keymap.set
+local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
 
 -- Quit commands
-map("n", "<F5>", "<cmd>quitall<cr>", { noremap = true, silent = true })
-map("n", "<space>q", "<cmd>quit<cr>", { noremap = true, silent = true })
+map("n", "<F5>", "<cmd>quitall<cr>", opts)
+map("n", "<space>q", "<cmd>quit<cr>", opts)
 
 -- Diagnostic
-map("n", "<space>df",  vim.diagnostic.open_float, { noremap = true, silent = true })
-map("n", "<space>dp",  vim.diagnostic.goto_prev, { noremap = true, silent = true })
-map("n", "<space>dn",  vim.diagnostic.goto_next, { noremap = true, silent = true })
+map("n", "<space>d",  "<cmd>Telescope diagnostics<cr>", opts)
+map("n", "<space>df",  vim.diagnostic.open_float, opts)
 
 -- Buffer
-map("n", "<space>c", ":bd<CR>", { noremap = true, silent = true })
-map("n", "<space>w", "<cmd>w!<cr>", { noremap = true, silent = true })
-map("n", "<S-k>", vim.lsp.buf.hover, { noremap = true, silent = true })
-map("n", "<space>rn", vim.lsp.buf.rename, { noremap = true, silent = true })
-map("n", "ti", vim.lsp.buf.implementation, { noremap = true, silent = true })
-map("n", "td", vim.lsp.buf.type_definition, { noremap = true, silent = true })
-map("n", "tr", vim.lsp.buf.references, { noremap = true, silent = true })
-map("n", "ts", vim.lsp.buf.signature_help, { noremap = true, silent = true })
-map({"n", "v"}, "<space>fm", "<cmd>lua require('conform').format()<cr>")
-map("n", "<space>ca", vim.lsp.buf.code_action, { noremap = true, silent = true })
-map("n", "gd", vim.lsp.buf.definition, { noremap = true, silent = true })
-map("n", "gdt", ":tab split | lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
-map("n", "gdv", ":vsplit | lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
+map("n", "<space>c", ":bd<CR>", opts)
+map("n", "<space>r", vim.lsp.buf.rename, opts)
+
+map("i", "<C-k>", vim.lsp.buf.signature_help, opts)
+
+map("n", "ti", vim.lsp.buf.implementation, opts)
+map("n", "tr", vim.lsp.buf.references, opts)
+map("n", "td", vim.lsp.buf.definition, opts)
+map("n", "tt", ":tab split | lua vim.lsp.buf.definition()<CR>", opts)
+map("n", "ts", ":vsplit | lua vim.lsp.buf.definition()<CR>", opts)
+
+-- Code action
+map("n", "<space>a", vim.lsp.buf.code_action, opts)
+map({"n", "v"}, "<space>m", "<cmd>lua require('conform').format()<cr>")
 
 -- Telescope
-map("n", "<space>f",  "<cmd>Telescope find_files<cr>", { noremap = true, silent = true })
-map("n", "<space>fg",  "<cmd>Telescope live_grep<cr>", { noremap = true, silent = true })
-map("n", "<space>fk",  "<cmd>Telescope keymaps<cr>", { noremap = true, silent = true })
-map("n", "<space>fh",  "<cmd>Telescope help_tags<cr>", { noremap = true, silent = true })
-map("n", "<space>fc",  "<cmd>Telescope commands<cr>", { noremap = true, silent = true })
-map("n", "<space>fb",  "<cmd>Telescope buffers<cr>", { noremap = true, silent = true })
-map("n", "<space>fs",  "<cmd>Telescope lsp_document_symbols<cr>", { noremap = true, silent = true })
-map("n", "<space>dl",  "<cmd>Telescope diagnostics<cr>", { noremap = true, silent = true })
-
--- Git
-map("n", "<space>gb", "<cmd>Gitsigns blame<cr>", { noremap = true, silent = true })
-map("n", "<space>ga", "<cmd>Gitsigns toggle_current_line_blame<cr>", { noremap = true, silent = true })
-map("n", "<space>gl", "<cmd>Gitsigns blame_line<cr>", { noremap = true, silent = true })
-map("n", "<space>gr",  "<cmd>Telescope git_branches<cr>", { noremap = true, silent = true })
-map("n", "<space>gt",  "<cmd>Telescope git_stash<cr>", { noremap = true, silent = true })
-map("n", "<space>gs",  "<cmd>Telescope git_status<cr>", { noremap = true, silent = true })
-map("n", "<space>gc",  "<cmd>Telescope git_commits<cr>", { noremap = true, silent = true })
--- map("n", "<space>gs",  "<cmd>:Neotree float git_status<cr>", { noremap = true, silent = true })
+map("n", "<space>f",  "<cmd>Telescope find_files<cr>", opts)
+map("n", "<space>g",  "<cmd>Telescope live_grep<cr>", opts)
+map("n", "<space>b",  "<cmd>Telescope buffers<cr>", opts)
+map("n", "<space>s",  "<cmd>Telescope lsp_document_symbols<cr>", opts)
 
 -- Explore files tree
-map("n", "<space>ee", "<cmd>:Neotree float<CR>", { noremap = true, silent = true })
-map("n", "<space>ed", "<cmd>:Neotree reveal_force_cwd<CR>", { noremap = true, silent = true })
+map("n", "<space>e", "<cmd>:Neotree float reveal_force_cwd<CR>", opts)
 
 -- Tabs
-map("n", "tn", ":tabnext<CR>", { noremap = true, silent = true })
-map("n", "tp", ":tabprev<CR>", { noremap = true, silent = true })
+map("n", "tn", ":tabnext<CR>", opts)
+map("n", "tp", ":tabprev<CR>", opts)
 
 map("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
 map("n", "<C-j>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
@@ -69,8 +55,8 @@ map("n", "<C-Right>", "<cmd>vertical resize -2<cr>", { desc = "Increase Window W
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and Clear hlsearch" })
 
 
-map("x", "J", ":move '>+1<CR>gv=gv", { noremap = true, silent = true })
-map("x", "K", ":move '<-2<CR>gv=gv", { noremap = true, silent = true })
+map("x", "J", ":move '>+1<CR>gv=gv", opts)
+map("x", "K", ":move '<-2<CR>gv=gv", opts)
 
 function ReloadConfig()
   for name,_ in pairs(package.loaded) do
@@ -87,4 +73,4 @@ function ReloadConfig()
   print("Configuration reloaded!")
 end
 
-map("n", "<leader>rr", ReloadConfig, { noremap = true, silent = true })
+map("n", "<leader>rr", ReloadConfig, opts)
