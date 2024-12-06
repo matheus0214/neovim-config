@@ -22,7 +22,6 @@ vim.opt.splitright = true -- force all vertical splits to go to the right of cur
 vim.opt.swapfile = false -- creates a swapfile
 vim.opt.termguicolors = true -- set term gui colors (most terminals support this)
 vim.opt.title = true -- set the title of window to the value of the titlestring
-vim.opt.titlestring = "%<%F%=%l/%L - nvim" -- what the title of the window will be set to
 vim.opt.undodir = vim.fn.stdpath "cache" .. "/undo"
 vim.opt.undofile = true -- enable persistent undo
 vim.opt.updatetime = 300 -- faster completion
@@ -30,10 +29,7 @@ vim.opt.writebackup = false -- if a file is being edited by another program (or 
 vim.opt.expandtab = true -- convert tabs to spaces
 vim.opt.shiftwidth = 2 -- the number of spaces inserted for each indentation
 vim.opt.tabstop = 2 -- insert 2 spaces for a tab
-vim.opt.cursorline = true -- highlight the current line
-vim.opt.number = true -- set numbered lines
-vim.opt.relativenumber = true-- set relative numbered lines
-vim.opt.numberwidth = 1-- set number column width to 2 {default 4}
+
 vim.opt.signcolumn = "yes" -- always show the sign column otherwise it would shift the text each time
 vim.opt.wrap = true -- display lines as one long line
 vim.opt.spell = false
@@ -42,17 +38,17 @@ vim.opt.scrolloff = 8 -- is one of my fav
 vim.opt.sidescrolloff = 8
 vim.opt.textwidth = 80
 
+vim.opt.cursorline = true -- highlight the current line
+vim.opt.number = true -- set numbered lines
+vim.opt.relativenumber = true-- set relative numbered lines
+vim.opt.numberwidth = 1-- set number column width to 2 {default 4}
+
 vim.o.foldcolumn = '0' -- '0' is not bad
 vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 
-
-vim.g.netrw_winsize = 30
--- vim.g.netrw_keepdir = 0
-vim.g.netrw_banner = 0
-vim.g.netrw_liststyle = 3
-
--- vim.o.background = 'light'
 vim.opt.timeoutlen = 600 -- time to wait for a mapped sequence to complete (in milliseconds)
 vim.opt.guicursor = "n-v-i-c:block"
+
+
