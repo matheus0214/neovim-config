@@ -35,8 +35,6 @@ return {
 	{ "williamboman/mason.nvim" },
 	{ "williamboman/mason-lspconfig.nvim" },
 	{ "neovim/nvim-lspconfig" },
-	{ "EdenEast/nightfox.nvim", name = "nightfox" },
-	{ "folke/zen-mode.nvim" },
 	{ "stevearc/conform.nvim" },
 	{ "WhoIsSethDaniel/mason-tool-installer.nvim" },
 	{ "mfussenegger/nvim-lint" },
