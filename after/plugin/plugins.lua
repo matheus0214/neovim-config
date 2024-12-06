@@ -105,7 +105,8 @@ telescope.setup({
 	},
 })
 
-vim.cmd("colorscheme catppuccin")
+
+vim.cmd("colorscheme catppuccin-macchiato")
 
 autopairs.setup({})
 autotag.setup({})

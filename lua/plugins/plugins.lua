@@ -56,4 +56,5 @@ return {
 		},
 	},
 	{ "catppuccin/nvim" },
+  {"onsails/lspkind.nvim"}
 }

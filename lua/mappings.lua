@@ -48,7 +48,7 @@ map("n", "gdt", ":tab split | lua vim.lsp.buf.definition()<CR>", { noremap = tru
 map("n", "gdv", ":vsplit | lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
 
 -- Telescope
-map("n", "<space>ff",  "<cmd>Telescope find_files<cr>", { noremap = true, silent = true })
+map("n", "<space>f",  "<cmd>Telescope find_files<cr>", { noremap = true, silent = true })
 map("n", "<space>fg",  "<cmd>Telescope live_grep<cr>", { noremap = true, silent = true })
 map("n", "<space>fk",  "<cmd>Telescope keymaps<cr>", { noremap = true, silent = true })
 map("n", "<space>fh",  "<cmd>Telescope help_tags<cr>", { noremap = true, silent = true })
