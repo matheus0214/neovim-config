@@ -17,11 +17,11 @@ map("n", "<space>r", vim.lsp.buf.rename, opts)
 
 map("i", "<C-k>", vim.lsp.buf.signature_help, opts)
 
-map("n", "ti", vim.lsp.buf.implementation, opts)
-map("n", "tr", vim.lsp.buf.references, opts)
-map("n", "td", vim.lsp.buf.definition, opts)
-map("n", "tt", ":tab split | lua vim.lsp.buf.definition()<CR>", opts)
-map("n", "ts", ":vsplit | lua vim.lsp.buf.definition()<CR>", opts)
+map("n", "gi", vim.lsp.buf.implementation, opts)
+map("n", "gr", vim.lsp.buf.references, opts)
+map("n", "gd", vim.lsp.buf.definition, opts)
+map("n", "gt", ":tab split | lua vim.lsp.buf.definition()<CR>", opts)
+map("n", "gs", ":vsplit | lua vim.lsp.buf.definition()<CR>", opts)
 
 -- Code action
 map("n", "<space>a", vim.lsp.buf.code_action, opts)
