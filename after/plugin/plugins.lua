@@ -82,7 +82,7 @@ telescope.setup({
 })
 
 
-vim.cmd("colorscheme catppuccin-macchiato")
+vim.cmd("colorscheme americano")
 
 autopairs.setup({})
 

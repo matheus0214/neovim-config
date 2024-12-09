@@ -29,6 +29,5 @@ return {
 			"MunifTanjim/nui.nvim",
 		},
 	},
-	{ "catppuccin/nvim" },
 	{ "cpwrs/americano.nvim" },
 }
