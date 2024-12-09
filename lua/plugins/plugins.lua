@@ -1,12 +1,5 @@
 return {
-	{
-		"kevinhwang91/nvim-ufo",
-		dependencies = {
-			"kevinhwang91/promise-async",
-		},
-	},
 	{ "gelguy/wilder.nvim" },
-	{ "windwp/nvim-ts-autotag" },
 	{
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
