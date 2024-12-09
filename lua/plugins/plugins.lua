@@ -30,6 +30,5 @@ return {
 		},
 	},
 	{ "catppuccin/nvim" },
-	{ "onsails/lspkind.nvim" },
 	{ "cpwrs/americano.nvim" },
 }
