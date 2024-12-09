@@ -16,9 +16,10 @@ for type, icon in pairs(signs) do
 end
 
 vim.diagnostic.config({
-  virtual_text = false, -- Disable inline text
-  signs = false,        -- Keep signs (gutter icons)
-  underline = true,     -- Underline errors in the code
-  update_in_insert = false, -- Don't show diagnostics while typing
-  severity_sort = true, -- Show diagnostics in order of severity
+  virtual_text = false,
+  signs = false,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
 })
+
