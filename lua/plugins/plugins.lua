@@ -20,7 +20,6 @@ return {
 	{ "stevearc/conform.nvim" },
 	{ "WhoIsSethDaniel/mason-tool-installer.nvim" },
 	{ "mfussenegger/nvim-lint" },
-	{ "nvim-lualine/lualine.nvim" },
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v3.x",
