@@ -11,16 +11,6 @@ return {
 	},
 	{ "nvim-telescope/telescope-ui-select.nvim" },
 	{
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
-	},
-	{ "williamboman/mason.nvim" },
-	{ "williamboman/mason-lspconfig.nvim" },
-	{ "neovim/nvim-lspconfig" },
-	{ "stevearc/conform.nvim" },
-	{ "WhoIsSethDaniel/mason-tool-installer.nvim" },
-	{ "mfussenegger/nvim-lint" },
-	{
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v3.x",
 		dependencies = {
