@@ -26,7 +26,8 @@ vim.opt.writebackup = false -- if a file is being edited by another program (or 
 vim.opt.expandtab = true -- convert tabs to spaces
 vim.opt.shiftwidth = 2 -- the number of spaces inserted for each indentation
 
-vim.opt.signcolumn = "yes" -- always show the sign column otherwise it would shift the text each time
+vim.opt.signcolumn = "no" -- always show the sign column otherwise it would shift the text each time
+
 vim.opt.wrap = true -- display lines as one long line
 vim.opt.spell = false
 vim.opt.spelllang = "en"
@@ -34,11 +35,12 @@ vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.textwidth = 80
 
-vim.opt.number = true
-vim.opt.relativenumber = true
+-- vim.opt.number = true
+-- vim.opt.relativenumber = true
 vim.opt.numberwidth = 1
 
 vim.opt.timeoutlen = 300
 vim.opt.guicursor = "n-v-i-c:block"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.tabstop = 2
+
