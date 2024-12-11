@@ -14,12 +14,6 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 	},
-	{ "williamboman/mason.nvim" },
-	{ "williamboman/mason-lspconfig.nvim" },
-	{ "neovim/nvim-lspconfig" },
-	{ "stevearc/conform.nvim" },
-	{ "WhoIsSethDaniel/mason-tool-installer.nvim" },
-	{ "mfussenegger/nvim-lint" },
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v3.x",
@@ -30,16 +24,4 @@ return {
 		},
 	},
 	{ "cpwrs/americano.nvim" },
-	{ "onsails/lspkind.nvim" },
-	{
-		"hrsh7th/nvim-cmp",
-		"hrsh7th/cmp-nvim-lsp",
-		{
-			"L3MON4D3/LuaSnip",
-			dependencies = {
-				"saadparwaiz1/cmp_luasnip",
-				"rafamadriz/friendly-snippets",
-			},
-		},
-	},
 }

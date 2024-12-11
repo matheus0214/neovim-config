@@ -7,25 +7,8 @@ vim.g.mapleader = " "
 map("n", "<F5>", "<cmd>quitall<cr>", opts)
 map("n", "<space>q", "<cmd>quit<cr>", opts)
 
--- Diagnostic
-map("n", "<space>d",  "<cmd>Telescope diagnostics<cr>", opts)
-map("n", "<space>df",  vim.diagnostic.open_float, opts)
-
 -- Buffer
 map("n", "<space>c", ":bd<CR>", opts)
-map("n", "<space>r", vim.lsp.buf.rename, opts)
-
-map("i", "<C-k>", vim.lsp.buf.signature_help, opts)
-
-map("n", "gi", vim.lsp.buf.implementation, opts)
-map("n", "gr", vim.lsp.buf.references, opts)
-map("n", "gd", vim.lsp.buf.definition, opts)
-map("n", "gt", ":tab split | lua vim.lsp.buf.definition()<CR>", opts)
-map("n", "gs", ":vsplit | lua vim.lsp.buf.definition()<CR>", opts)
-
--- Code action
-map("n", "<space>a", vim.lsp.buf.code_action, opts)
-map({"n", "v"}, "<space>m", "<cmd>lua require('conform').format()<cr>")
 
 -- Telescope
 map("n", "<space>f",  "<cmd>Telescope find_files<cr>", opts)
