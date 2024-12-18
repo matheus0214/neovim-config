@@ -6,6 +6,7 @@ vim.g.mapleader = " "
 -- Quit commands
 map("n", "<F5>", "<cmd>quitall<cr>", opts)
 map("n", "<space>q", "<cmd>quit<cr>", opts)
+map("n", "<space>w", ":w!<CR>", opts)
 
 -- Buffer
 map("n", "<space>c", ":bd<CR>", opts)
