@@ -17,7 +17,8 @@ map("n", "<space>b",  "<cmd>Telescope buffers<cr>", opts)
 map("n", "<space>s",  "<cmd>Telescope lsp_document_symbols<cr>", opts)
 
 -- Explore files tree
-map("n", "<space>e", "<cmd>:Neotree float reveal_force_cwd<CR>", opts)
+-- map("n", "<space>e", "<cmd>:Neotree float reveal_force_cwd<CR>", opts)
+map("n", "<space>e", "<cmd>:Oil<CR>", opts)
 
 -- Tabs
 map("n", "tn", ":tabnext<CR>", opts)

@@ -2,7 +2,9 @@ local autopairs = require("nvim-autopairs")
 local telescope = require("telescope")
 local telescope_actions = require("telescope.actions")
 local treesitter = require("nvim-treesitter.configs")
+local oil = require("oil")
 
+oil.setup()
 telescope.load_extension("ui-select")
 
 telescope.setup({
