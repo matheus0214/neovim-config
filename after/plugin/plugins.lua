@@ -1,6 +1,7 @@
 local autopairs = require("nvim-autopairs")
 local telescope = require("telescope")
 local telescope_actions = require("telescope.actions")
+local treesitter = require("nvim-treesitter.configs")
 
 telescope.load_extension("ui-select")
 
@@ -57,4 +58,12 @@ vim.cmd("colorscheme americano")
 
 autopairs.setup({})
 
-
+treesitter.setup({
+  auto_install = true,
+	ensure_installed = { "lua", "python", "javascript", "c", "typescript" },
+	highlight = { enable = true },
+	indent = { enable = true },
+	sync_install = false,
+	ignore_install = {},
+	modules = { "lua", "javascript", "c", "typescript" },
+})
