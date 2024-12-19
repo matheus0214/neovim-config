@@ -4,6 +4,7 @@ local telescope_actions = require("telescope.actions")
 local treesitter = require("nvim-treesitter.configs")
 local oil = require("oil")
 local conform = require("conform")
+local cmp = require("cmp")
 
 oil.setup()
 telescope.load_extension("ui-select")
@@ -78,4 +79,14 @@ conform.setup({
 		javascript = { "biome", "prettierd", "prettier", stop_after_first = true },
 		typescript = { "biome", "prettierd", "prettier", stop_after_first = true },
 	},
+})
+
+cmp.setup({
+  mapping = cmp.mapping.preset.insert({
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+  }),
+  sources = {
+    { name = 'path' },
+  }
 })
