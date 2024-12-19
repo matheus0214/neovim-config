@@ -17,6 +17,8 @@ map("n", "<space>g",  "<cmd>Telescope live_grep<cr>", opts)
 map("n", "<space>b",  "<cmd>Telescope buffers<cr>", opts)
 map("n", "<space>s",  "<cmd>Telescope lsp_document_symbols<cr>", opts)
 
+map({"n", "v"}, "<space>m", "<cmd>lua require('conform').format()<cr>")
+
 -- Explore files tree
 -- map("n", "<space>e", "<cmd>:Neotree float reveal_force_cwd<CR>", opts)
 map("n", "<space>e", "<cmd>:Oil<CR>", opts)

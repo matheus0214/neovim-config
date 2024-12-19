@@ -3,6 +3,7 @@ local telescope = require("telescope")
 local telescope_actions = require("telescope.actions")
 local treesitter = require("nvim-treesitter.configs")
 local oil = require("oil")
+local conform = require("conform")
 
 oil.setup()
 telescope.load_extension("ui-select")
@@ -68,4 +69,13 @@ treesitter.setup({
 	sync_install = false,
 	ignore_install = {},
 	modules = { "lua", "javascript", "c", "typescript" },
+})
+
+conform.setup({
+	formatters_by_ft = {
+		lua = { "stylua" },
+		python = { "black" },
+		javascript = { "biome", "prettierd", "prettier", stop_after_first = true },
+		typescript = { "biome", "prettierd", "prettier", stop_after_first = true },
+	},
 })

@@ -20,5 +20,6 @@ return {
     dependencies = { 
       { "echasnovski/mini.icons", opts = {} } 
     },
-  }
+  },
+  {"stevearc/conform.nvim"}
 }
