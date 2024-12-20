@@ -1,9 +1,5 @@
 return {
 	{ "gelguy/wilder.nvim" },
-	{
-		"windwp/nvim-autopairs",
-		event = "InsertEnter",
-	},
 	{ "tpope/vim-commentary" },
 	{
 		"nvim-telescope/telescope.nvim",

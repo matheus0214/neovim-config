@@ -1,4 +1,3 @@
-local autopairs = require("nvim-autopairs")
 local telescope = require("telescope")
 local telescope_actions = require("telescope.actions")
 local treesitter = require("nvim-treesitter.configs")
@@ -59,8 +58,6 @@ telescope.setup({
 
 
 vim.cmd("colorscheme habamax")
-
-autopairs.setup({})
 
 treesitter.setup({
   auto_install = true,
