@@ -6,7 +6,6 @@ local conform = require("conform")
 local cmp = require("cmp")
 
 oil.setup()
-telescope.load_extension("ui-select")
 
 telescope.setup({
 	defaults = {
