@@ -58,7 +58,7 @@ telescope.setup({
 })
 
 
-vim.cmd("colorscheme americano")
+vim.cmd("colorscheme habamax")
 
 autopairs.setup({})
 

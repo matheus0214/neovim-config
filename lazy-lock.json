@@ -1,5 +1,4 @@
 {
-  "americano.nvim": { "branch": "main", "commit": "12931e1a5515a502dd4c145cbbf142d868cf61c4" },
   "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },
   "conform.nvim": { "branch": "master", "commit": "f4e8837878fc5712d053ba3091a73d27d96a09e2" },
   "lazy.nvim": { "branch": "main", "commit": "7e6c863bc7563efbdd757a310d17ebc95166cef3" },

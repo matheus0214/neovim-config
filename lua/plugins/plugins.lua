@@ -14,7 +14,6 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 	},
-	{ "cpwrs/americano.nvim" },
   {
     "stevearc/oil.nvim",
     dependencies = { 
