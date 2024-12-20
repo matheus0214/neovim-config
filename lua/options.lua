@@ -35,8 +35,8 @@ vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.textwidth = 80
 
--- vim.opt.number = true
--- vim.opt.relativenumber = true
+vim.opt.number = true
+vim.opt.relativenumber = true
 vim.opt.numberwidth = 1
 
 vim.opt.timeoutlen = 300
