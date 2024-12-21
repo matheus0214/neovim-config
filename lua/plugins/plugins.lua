@@ -4,10 +4,6 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 	{
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
-	},
-  {
     "stevearc/oil.nvim",
     dependencies = { 
       { "echasnovski/mini.icons", opts = {} } 

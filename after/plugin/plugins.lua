@@ -1,6 +1,5 @@
 local telescope = require("telescope")
 local telescope_actions = require("telescope.actions")
-local treesitter = require("nvim-treesitter.configs")
 local oil = require("oil")
 local conform = require("conform")
 local cmp = require("cmp")
@@ -57,16 +56,6 @@ telescope.setup({
 
 
 vim.cmd("colorscheme habamax")
-
-treesitter.setup({
-  auto_install = true,
-	ensure_installed = { "lua", "python", "javascript", "c", "typescript" },
-	highlight = { enable = true },
-	indent = { enable = true },
-	sync_install = false,
-	ignore_install = {},
-	modules = { "lua", "javascript", "c", "typescript" },
-})
 
 conform.setup({
 	formatters_by_ft = {
