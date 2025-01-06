@@ -55,7 +55,7 @@ telescope.setup({
 })
 
 
-vim.cmd("colorscheme habamax")
+vim.cmd("colorscheme americano")
 
 conform.setup({
 	formatters_by_ft = {

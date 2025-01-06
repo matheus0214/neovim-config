@@ -15,5 +15,6 @@ return {
     dependencies = {
       "hrsh7th/cmp-path"
     }
-  }
+  },
+  { "cpwrs/americano.nvim" }
 }
