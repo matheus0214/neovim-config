@@ -1,9 +1,5 @@
 return {
 	{ "gelguy/wilder.nvim" },
-	{
-		"windwp/nvim-autopairs",
-		event = "InsertEnter",
-	},
 	{ "tpope/vim-commentary" },
 	{
 		"nvim-telescope/telescope.nvim",
@@ -21,14 +17,11 @@ return {
 	{ "WhoIsSethDaniel/mason-tool-installer.nvim" },
 	{ "mfussenegger/nvim-lint" },
 	{
-		"nvim-neo-tree/neo-tree.nvim",
-		branch = "v3.x",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-			"MunifTanjim/nui.nvim",
-		},
-	},
+    "stevearc/oil.nvim",
+    dependencies = {
+      { "echasnovski/mini.icons", opts = {} }
+    },
+  },
 	{ "cpwrs/americano.nvim" },
 	{ "onsails/lspkind.nvim" },
 	{

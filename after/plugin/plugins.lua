@@ -1,10 +1,12 @@
-local autopairs = require("nvim-autopairs")
 local treesitter = require("nvim-treesitter.configs")
 local telescope = require("telescope")
 local conform = require("conform")
 local mason_ensure_installed = require("mason-tool-installer")
 local lint = require("lint")
 local telescope_actions = require("telescope.actions")
+local oil = require("oil")
+
+oil.setup()
 
 lint.linters_by_ft = {
 	python = { "ruff" },
@@ -83,8 +85,6 @@ telescope.setup({
 
 
 vim.cmd("colorscheme americano")
-
-autopairs.setup({})
 
 treesitter.setup({
 	auto_install = true,
