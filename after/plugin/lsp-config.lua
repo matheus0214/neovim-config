@@ -7,7 +7,7 @@ capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 mason.setup()
 mason_lsp.setup({
-	ensure_installed = { "biome", "lua_ls", "ts_ls", "clangd", "rust_analyzer", "pyright" },
+	ensure_installed = { "gopls", "biome", "lua_ls", "ts_ls", "clangd", "rust_analyzer", "pyright" },
 	handlers = {
 		function(server_name)
 			require("lspconfig")[server_name].setup({})
@@ -15,6 +15,9 @@ mason_lsp.setup({
 	},
 })
 
+nvim_lspconfig.gopls.setup({
+	capabilities = capabilities,
+})
 nvim_lspconfig.ts_ls.setup({
 	capabilities = capabilities,
 })

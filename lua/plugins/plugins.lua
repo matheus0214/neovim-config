@@ -23,7 +23,6 @@ return {
     },
   },
 	{ "cpwrs/americano.nvim" },
-	{ "onsails/lspkind.nvim" },
 	{
 		"hrsh7th/nvim-cmp",
 		"hrsh7th/cmp-nvim-lsp",

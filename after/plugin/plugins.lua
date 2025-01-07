@@ -12,6 +12,7 @@ lint.linters_by_ft = {
 	python = { "ruff" },
 	javascript = { "biomejs" },
 	typescript = { "biomejs" },
+  golang = { "golangcilint" }
 }
 
 mason_ensure_installed.setup({
@@ -21,6 +22,7 @@ mason_ensure_installed.setup({
 		"stylua",
 		"pylint",
 		"ruff",
+    "goimports"
 	},
 })
 
@@ -30,6 +32,7 @@ conform.setup({
 		python = { "black" },
 		javascript = { "biome", "prettierd", "prettier", stop_after_first = true },
 		typescript = { "biome", "prettierd", "prettier", stop_after_first = true },
+    go = { "goimports", "gofmt" }
 	},
 })
 
