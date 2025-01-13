@@ -22,7 +22,6 @@ return {
       { "echasnovski/mini.icons", opts = {} }
     },
   },
-	{ "cpwrs/americano.nvim" },
 	{
 		"hrsh7th/nvim-cmp",
 		"hrsh7th/cmp-nvim-lsp",

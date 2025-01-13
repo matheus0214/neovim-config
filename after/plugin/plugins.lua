@@ -39,23 +39,6 @@ conform.setup({
 telescope.load_extension("ui-select")
 
 telescope.setup({
-	defaults = {
-		mappings = {
-			n = {
-				["s"] = telescope_actions.select_vertical,
-				["t"] = telescope_actions.select_tab,
-			},
-		},
-		layout_strategy = "horizontal",
-		layout_config = {
-			prompt_position = "top",
-			width = 0.9,
-			height = 0.8,
-			preview_cutoff = 120,
-		},
-		sorting_strategy = "ascending",
-		initial_mode = "normal",
-	},
 	pickers = {
 		diagnostics = {
 			reviewer = true,
@@ -87,7 +70,7 @@ telescope.setup({
 })
 
 
-vim.cmd("colorscheme americano")
+vim.cmd("colorscheme habamax")
 
 treesitter.setup({
 	auto_install = true,
