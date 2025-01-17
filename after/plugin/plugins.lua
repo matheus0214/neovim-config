@@ -3,10 +3,15 @@ local telescope = require("telescope")
 local conform = require("conform")
 local mason_ensure_installed = require("mason-tool-installer")
 local lint = require("lint")
-local telescope_actions = require("telescope.actions")
+local autopairs = require("nvim-autopairs")
 local oil = require("oil")
+local lualine = require("lualine")
+local jellybeans = require("jellybeans")
 
 oil.setup()
+autopairs.setup()
+lualine.setup({})
+jellybeans.setup()
 
 lint.linters_by_ft = {
 	python = { "ruff" },
@@ -17,11 +22,11 @@ lint.linters_by_ft = {
 
 mason_ensure_installed.setup({
 	ensure_installed = {
-		"black",
+		-- "black",
 		"biome",
 		"stylua",
-		"pylint",
-		"ruff",
+		-- "pylint",
+		-- "ruff",
     "goimports"
 	},
 })
@@ -38,42 +43,13 @@ conform.setup({
 
 telescope.load_extension("ui-select")
 
-telescope.setup({
-	pickers = {
-		diagnostics = {
-			reviewer = true,
-			fname_width = 0,
-			layout_config = {
-				width = 0.8,
-			},
-			layout_strategy = "vertical",
-			sorting_strategy = "ascending",
-			results_title = false,
-			preview_title = false,
-			prompt_title = false,
-		},
-		buffers = {
-			previewer = false,
-			theme = "dropdown",
-			mappings = {
-				n = {
-					["<C-e>"] = "delete_buffer",
-					["l"] = "select_default",
-				},
-			},
-			initial_mode = "normal",
-		},
-		symbols = {
-			theme = "dropdown",
-		},
-	},
-})
+telescope.setup()
 
 
-vim.cmd("colorscheme habamax")
+vim.cmd("colorscheme jellybeans")
 
 treesitter.setup({
-	auto_install = true,
+	auto_install = false,
 	ensure_installed = { "lua", "python", "javascript", "c", "typescript" },
 	highlight = { enable = true },
 	indent = { enable = true },

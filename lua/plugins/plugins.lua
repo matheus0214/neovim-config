@@ -33,4 +33,7 @@ return {
 			},
 		},
 	},
+  { "windwp/nvim-autopairs" },
+  { "nvim-lualine/lualine.nvim" },
+  { "wtfox/jellybeans.nvim" }
 }
