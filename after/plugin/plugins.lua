@@ -6,18 +6,16 @@ local lint = require("lint")
 local autopairs = require("nvim-autopairs")
 local oil = require("oil")
 local lualine = require("lualine")
-local jellybeans = require("jellybeans")
 
 oil.setup()
 autopairs.setup()
 lualine.setup({})
-jellybeans.setup()
 
 lint.linters_by_ft = {
 	python = { "ruff" },
 	javascript = { "biomejs" },
 	typescript = { "biomejs" },
-  golang = { "golangcilint" }
+	golang = { "golangcilint" },
 }
 
 mason_ensure_installed.setup({
@@ -27,7 +25,7 @@ mason_ensure_installed.setup({
 		"stylua",
 		-- "pylint",
 		-- "ruff",
-    "goimports"
+		"goimports",
 	},
 })
 
@@ -37,7 +35,7 @@ conform.setup({
 		python = { "black" },
 		javascript = { "biome", "prettierd", "prettier", stop_after_first = true },
 		typescript = { "biome", "prettierd", "prettier", stop_after_first = true },
-    go = { "goimports", "gofmt" }
+		go = { "goimports", "gofmt" },
 	},
 })
 
@@ -45,8 +43,7 @@ telescope.load_extension("ui-select")
 
 telescope.setup()
 
-
-vim.cmd("colorscheme jellybeans")
+vim.cmd("colorscheme catppuccin")
 
 treesitter.setup({
 	auto_install = false,

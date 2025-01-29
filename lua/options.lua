@@ -42,5 +42,5 @@ vim.opt.numberwidth = 1
 vim.opt.timeoutlen = 500
 vim.opt.guicursor = "n-v-i-c:block"
 vim.opt.clipboard = "unnamedplus"
-vim.opt.tabstop = 2
+-- vim.opt.tabstop = 2
 

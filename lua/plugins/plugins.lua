@@ -17,11 +17,11 @@ return {
 	{ "WhoIsSethDaniel/mason-tool-installer.nvim" },
 	{ "mfussenegger/nvim-lint" },
 	{
-    "stevearc/oil.nvim",
-    dependencies = {
-      { "echasnovski/mini.icons", opts = {} }
-    },
-  },
+		"stevearc/oil.nvim",
+		dependencies = {
+			{ "echasnovski/mini.icons", opts = {} },
+		},
+	},
 	{
 		"hrsh7th/nvim-cmp",
 		"hrsh7th/cmp-nvim-lsp",
@@ -33,7 +33,7 @@ return {
 			},
 		},
 	},
-  { "windwp/nvim-autopairs" },
-  { "nvim-lualine/lualine.nvim" },
-  { "wtfox/jellybeans.nvim" }
+	{ "windwp/nvim-autopairs" },
+	{ "nvim-lualine/lualine.nvim" },
+	{ "catppuccin/nvim" },
 }
