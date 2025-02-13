@@ -4,12 +4,8 @@ local conform = require("conform")
 local mason_ensure_installed = require("mason-tool-installer")
 local lint = require("lint")
 local autopairs = require("nvim-autopairs")
-local oil = require("oil")
-local lualine = require("lualine")
 
-oil.setup()
 autopairs.setup()
-lualine.setup({})
 
 lint.linters_by_ft = {
 	python = { "ruff" },
@@ -43,7 +39,7 @@ telescope.load_extension("ui-select")
 
 telescope.setup()
 
-vim.cmd("colorscheme catppuccin")
+vim.cmd("colorscheme americano")
 
 treesitter.setup({
 	auto_install = false,

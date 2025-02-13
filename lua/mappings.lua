@@ -34,11 +34,11 @@ map("n", "<space>b",  "<cmd>Telescope buffers<cr>", opts)
 map("n", "<space>s",  "<cmd>Telescope lsp_document_symbols<cr>", opts)
 
 -- Explore files tree
-map("n", "<space>e", "<cmd>:Oil<CR>", opts)
+map("n", "<space>e", "<cmd>:Neotree reveal_force_cwd<CR>", opts)
 
 -- Tabs
-map("n", "tn", ":tabnext<CR>", opts)
-map("n", "tp", ":tabprev<CR>", opts)
+map("n", "tn", "<cmd>BufferNext<CR>", opts)
+map("n", "tp", "<cmd>BufferPrevious<CR>", opts)
 
 map("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
 map("n", "<C-j>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
