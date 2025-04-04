@@ -28,21 +28,12 @@ return {
 		},
 	},
 	{ "windwp/nvim-autopairs" },
-	{ "nvim-lualine/lualine.nvim" },
 	{ "cpwrs/americano.nvim" },
-	{
-		"romgrk/barbar.nvim",
-		dependencies = {
-			"lewis6991/gitsigns.nvim", -- OPTIONAL: for git status
-			"nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
-		},
-	},
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v3.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons",
 			"MunifTanjim/nui.nvim",
 		},
 	},

@@ -43,10 +43,10 @@ vim.cmd("colorscheme americano")
 
 treesitter.setup({
 	auto_install = false,
-	ensure_installed = { "lua", "python", "javascript", "c", "typescript" },
+	ensure_installed = { "lua", "python", "javascript", "typescript" },
 	highlight = { enable = true },
 	indent = { enable = true },
 	sync_install = false,
 	ignore_install = {},
-	modules = { "lua", "javascript", "c", "typescript" },
+	modules = { "lua", "javascript", "typescript" },
 })

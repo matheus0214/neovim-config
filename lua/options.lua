@@ -26,7 +26,7 @@ vim.opt.writebackup = false -- if a file is being edited by another program (or 
 vim.opt.expandtab = true -- convert tabs to spaces
 vim.opt.shiftwidth = 2 -- the number of spaces inserted for each indentation
 
-vim.opt.signcolumn = "no" -- always show the sign column otherwise it would shift the text each time
+vim.opt.signcolumn = "yes" -- always show the sign column otherwise it would shift the text each time
 
 vim.opt.wrap = true -- display lines as one long line
 vim.opt.spell = false
