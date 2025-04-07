@@ -1,4 +1,3 @@
-local treesitter = require("nvim-treesitter.configs")
 local telescope = require("telescope")
 local conform = require("conform")
 local mason_ensure_installed = require("mason-tool-installer")
@@ -35,18 +34,6 @@ conform.setup({
 	},
 })
 
-telescope.load_extension("ui-select")
-
 telescope.setup()
 
-vim.cmd("colorscheme americano")
-
-treesitter.setup({
-	auto_install = false,
-	ensure_installed = { "lua", "python", "javascript", "typescript" },
-	highlight = { enable = true },
-	indent = { enable = true },
-	sync_install = false,
-	ignore_install = {},
-	modules = { "lua", "javascript", "typescript" },
-})
+vim.cmd("colorscheme ponokai")
