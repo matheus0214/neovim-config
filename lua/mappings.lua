@@ -32,6 +32,7 @@ map("n", "<space>f",  "<cmd>Telescope find_files<cr>", opts)
 map("n", "<space>g",  "<cmd>Telescope live_grep<cr>", opts)
 map("n", "<space>b",  "<cmd>Telescope buffers<cr>", opts)
 map("n", "<space>s",  "<cmd>Telescope lsp_document_symbols<cr>", opts)
+map("n", "<space>gs",  "<cmd>Telescope git_status<cr>", opts)
 
 -- Explore files tree
 map("n", "<space>e", "<cmd>:Neotree reveal_force_cwd<CR>", opts)

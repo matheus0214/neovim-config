@@ -1,6 +1,9 @@
 local telescope = require("telescope")
 local conform = require("conform")
 local cmp = require("cmp")
+local gitsigns = require("gitsigns")
+
+gitsigns.setup()
 
 cmp.setup({
   sources = { { name = "path" } },

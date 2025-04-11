@@ -16,5 +16,6 @@ return {
 	},
     "olimorris/onedarkpro.nvim",
     "hrsh7th/nvim-cmp",
-    "hrsh7th/cmp-path"
+    "hrsh7th/cmp-path",
+    "lewis6991/gitsigns.nvim"
 }
