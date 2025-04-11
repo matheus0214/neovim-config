@@ -1,5 +1,15 @@
 local telescope = require("telescope")
 local conform = require("conform")
+local cmp = require("cmp")
+
+cmp.setup({
+  sources = { { name = "path" } },
+  mapping = {
+    ['<Tab>'] = cmp.mapping.select_next_item(),
+    ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+  },
+})
 
 conform.setup({
 	formatters_by_ft = {
