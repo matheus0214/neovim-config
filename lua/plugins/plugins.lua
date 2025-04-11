@@ -5,13 +5,7 @@ return {
 		"nvim-telescope/telescope.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
-	{ "williamboman/mason.nvim" },
-	{ "williamboman/mason-lspconfig.nvim" },
-	{ "neovim/nvim-lspconfig" },
 	{ "stevearc/conform.nvim" },
-	{ "WhoIsSethDaniel/mason-tool-installer.nvim" },
-	{ "mfussenegger/nvim-lint" },
-	{ "windwp/nvim-autopairs" },
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v3.x",
@@ -21,6 +15,6 @@ return {
 		},
 	},
     {
-      "shawilly/ponokai"
+      "olimorris/onedarkpro.nvim"
     }
 }
